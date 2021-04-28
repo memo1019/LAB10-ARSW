@@ -36,9 +36,26 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 ![](images/part3/part3-test-function.png)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
+    > El Objeto JSON utilziado para realziar las peticiones con postman y ejecuttarlas con newman es el siguiente:
+    >
+    > ![](images/newman.jpg)
+    >
+    > El comando utilizado para la ejecucion concurrente de las 10 pruebas 
+    > fue el siguiente:
+    >
+    > ![](images/comando.PNG)
 
-6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
+6. Cree una nueva Function que resuelva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
+    > La implementacion de memoria realizada fue la siguiente, teniendo 
+    > en cuenta que se mantiene el comportamiento anterior dado por la 
+    > funcion:
+    >
+    > ![](images/part3/memory1.jpg)
+                                                                                                                                                                                                                                                                                                 
+    > ![](images/part3/memory2.jpg)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
 **Preguntas**
 
 * ¿Qué es un Azure Function?
@@ -94,3 +111,18 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
     > por segundo.
 
 * Informe
+
+    > Como podremos observar en todas las peticiones se obtuvo un acierto 
+    > del 100%, adicionalemente los tiempos varian entre 42.2s y 1m 16.5s, esto 
+    > debido al tamaño de la solicitud y al nivel de procesamiento que este 
+    > debe tener, los siguientes son los informes mostrados por newman:
+    > ![](images/part3/c1.jpg)
+    > ![](images/part3/c2.jpg)
+    > ![](images/part3/c3.jpg)
+    > ![](images/part3/c4.jpg)
+    > ![](images/part3/c5.jpg)
+             
+    > Despues de ejecutar la coleccion de postman podemos ver que estos son 
+    > los compartamientos de la cpu y demas indicadores de la apliacion.
+
+    >![](images/memoria.PNG)
